@@ -1,4 +1,4 @@
-function logId(id: string | number | boolean) {
+function logIdNarrow(id: string | number | boolean) {
     // narrowing
     if (typeof id === 'string') {
         console.log('id',id.toLowerCase());

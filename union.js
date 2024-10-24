@@ -1,5 +1,5 @@
 "use strict";
-function logId(id) {
+function logIdNarrow(id) {
     // narrowing
     if (typeof id === 'string') {
         console.log('id', id.toLowerCase());

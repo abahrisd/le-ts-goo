@@ -4,8 +4,10 @@ input = 3;
 input = [1, 2];
 input = ['1', '2'];
 
-// error, no error with any
+// error
 // let resultInput: string = input;
+
+// no error with any
 let resultInput: any = input;
 
 function run(i: unknown) {
