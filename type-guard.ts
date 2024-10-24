@@ -1,14 +1,14 @@
 
 function logIdG(id: string | number) {
     // if (typeof id === "number") {
-    if (isString(id)) {
+    if (isString1(id)) {
         console.log('id',id)
     } else {
         console.log('id2',id);
     }
 }
 
-function isString(x: string | number): x is string {
+function isString1(x: string | number): x is string {
     return typeof x === 'string';
 }
 
