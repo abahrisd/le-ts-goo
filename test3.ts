@@ -4,7 +4,7 @@ interface IPayment {
     to: number;
 }
 
-enum PaymentStatus {
+enum PaymentStatuses {
     Success = 'success',
     Failed = 'failed',
 }
@@ -21,12 +21,12 @@ interface IDataFailed {
 }
 
 interface IResponseSuccess {
-    status: PaymentStatus.Success;
+    status: PaymentStatuses.Success;
     data: IDataSuccess;
 }
 
 interface IResponseFailed {
-    status: PaymentStatus.Failed;
+    status: PaymentStatuses.Failed;
     data: IDataFailed;
 }
 
@@ -39,7 +39,7 @@ function throwError(errorMessage: string): never {
 }
 
 function isResSuccess(result: IResponseSuccess | IResponseFailed): result is IResponseSuccess {
-    return result.status === PaymentStatus.Success;
+    return result.status === PaymentStatuses.Success;
 }
 
 const daPay: f = (result) => {
