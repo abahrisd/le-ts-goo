@@ -29,5 +29,4 @@
 *   noEmit: true - don't emit files on compilation
 *   noEmitOnError: true - don;t emit if error accused
 *
-*
 * */
