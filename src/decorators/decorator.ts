@@ -12,8 +12,28 @@ interface IUserService {
 class UserServiceDec implements IUserService {
     users: number;
 
+    @LogMethod
     getUsersInDatabase(): number {
-        return this.users;
+        throw Error('Error!');
+        // return this.users;
+    }
+}
+
+function LogMethod(
+    target: Object,
+    propertyKey: string | Symbol,
+    descriptor: TypedPropertyDescriptor<(...args: any[]) => any>
+) {
+    console.log('LogMethod',{
+        target,
+        propertyKey,
+        descriptor,
+    });
+
+    const oldValue = descriptor.value;
+    descriptor.value = () => {
+        console.log('no error',);
+        oldValue?.();
     }
 }
 
