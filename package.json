@@ -1,0 +1,14 @@
+{
+  "name": "le-ts-goo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abakhri Samir",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
+  }
+}
