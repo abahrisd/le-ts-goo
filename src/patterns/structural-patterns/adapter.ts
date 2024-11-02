@@ -6,7 +6,7 @@ class KVDatabase {
     }
 }
 
-function run(base: KVDatabase) {
+function runA(base: KVDatabase) {
     base.save('key', 'value');
 }
 
@@ -27,4 +27,4 @@ class PersistentDBAdapter extends KVDatabase {
     }
 }
 
-run(new PersistentDBAdapter(new PersistentDB()));
+runA(new PersistentDBAdapter(new PersistentDB()));
